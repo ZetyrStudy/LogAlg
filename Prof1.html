@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="#botao" id="botao">Menu</a>
+
+    <div id="menu" style="border: 1px solid black; width:150px; text-align: center;background: lightblue;">
+        <p><a href="index.html">Página inicial</a></p>
+        <p><a href="artigos.html">Artigos</a></p>
+        <p><a href="noticias.html">Notícias</a></p>
+        <p><a href="sobre.html">Sobre</a></p>
+    </div>
+    
+    <script>
+
+        // Esta é a função que mostra o menu.
+        function abreMenu() {
+            menu.style.display = 'block';
+        }
+
+        // Esta é a função que oculta o menu.
+        function fechaMenu() {
+            menu.style.display = 'none';
+        }
+
+        // Esta é a função que controla se o meu aparece ou não.
+        function controlaMenu() {
+            console.log('clicou');
+
+            // Se o menu está aparecendo, ou seja, display='block'
+            if (menu.style.display == 'block')
+
+                // Chama a função que oculta o menu.
+                fechaMenu();
+
+            // Se o menu está oculto, ou seja, display!='block'
+            else
+
+                // Chama a função que mostra o menu.
+                abreMenu();
+
+        }
+
+        // Esta linha monitora cliques no botão cujo id="botao".
+        document.getElementById('botao').onclick = controlaMenu;
+
+        // A variável 'menu' contém o menu
+        var menu = document.getElementById('menu');
+        // console.log(menu);
+
+    </script>
+</body>
+</html>
