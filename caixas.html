@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+         * Exibe uma caixa de alerta do navegador e 
+         * retorna 'true' quando fechar.
+         */
+        alert("Isso é um alerta!");
+
+        /*
+         * A caixa 'confirm' pede uma confirmação do usuário e
+         * retorna 'true' quando clicar em [Ok] ou 'false'
+         * quando clicar em [Cancelar].
+         */
+        if (confirm('Tem certeza da sua existência?')) {
+            alert("que bom que você existe!")
+        } else {
+            alert('Ui! você está morto?');
+        };
+
+        /*
+         * A caixa 'prompt' retorna o valor digitado pelo usuário
+         * que pode ser armazenado em  variáveis ou usado em outros
+         * elementos.
+         */
+        var nome = prompt('Digite seu nome: ');
+        alert('Olá ' + nome);
+
+    </script>
+
+
+</body>
+
+</html>
