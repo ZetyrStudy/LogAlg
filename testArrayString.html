@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<p style="font-size:20px"><strong>List:</strong></p>
+<p id="demo">Fruits</p>
+<p style="font-size:15px"><strong>Amount of Items:</strong></p>
+<p id="demo2">Number of fruits</p>
+<p style="font-size:15px"><strong>List Fancy Version:</strong></p>
+<p id="demo3">List</p>
+
+<p style="font-size:20px"><strong>Buttons:</strong></p>
+<button onclick="myFunction0()">Reset</button>
+<button onclick="myFunction()">Add 1 Lemon</button>
+<button onclick="myFunction2()">Add 1 Melon</button>
+<button onclick="myFunction3()">Try Number</button>
+<button onclick="myFunction4()">Try Pretty List -Type 1</button>
+<button onclick="myFunction5()">Try Pretty List -Type 2</button>
+<button onclick="myFunction6()">Remove Last Item</button>
+<button onclick="myFunction7()">Remove First Item</button>
+<p></p>
+<button onclick="myFunction8()">Add Banana at the start</button>
+<button onclick="myFunction10()">Sorts alphabetically</button>
+<button onclick="myFunction11()">Sorts alphabetically (Reverse)</button>
+
+
+
+<p>Remove item by Index: </p>
+<input type="number" id="removeId" />
+<input type="button" value="Submit" onclick="myFunction9()" />
+
+<script>
+fruits = ["Banana", "Orange", "Apple"];
+    document.getElementById("demo").innerHTML = fruits;
+
+function myFunction0() {
+    fruits = ["Banana", "Orange", "Apple"];
+    document.getElementById("demo").innerHTML = fruits;
+}
+
+function myFunction() {
+    fruits[fruits.length] = "Lemon";
+    document.getElementById("demo").innerHTML = fruits;
+}
+
+function myFunction2() {
+  fruits.push("Melon");
+  document.getElementById("demo").innerHTML = fruits;
+}
+function myFunction3() {
+    document.getElementById("demo2").innerHTML = fruits.length;
+}
+function myFunction4() {
+    let text = "<ul>";
+    for (let i = 0; i < fruits.length; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("demo3").innerHTML = text;
+}
+function myFunction5() {
+    document.getElementById("demo3").innerHTML = fruits.join(" & ");
+}
+function myFunction6() {
+    fruits.pop()
+    document.getElementById("demo").innerHTML = fruits
+}
+
+function myFunction7() {
+    fruits.shift()
+    document.getElementById("demo").innerHTML = fruits
+}
+
+function myFunction8() {
+    fruits.unshift("Banana")
+    document.getElementById("demo").innerHTML = fruits
+}
+
+function myFunction9() {
+    var removId = document.getElementById("removeId").value
+    console.log(removId)
+    var rem = removId - 1
+    console.log(rem)
+    delete fruits[0]
+    fruits.shift()
+    document.getElementById("demo").innerHTML = fruits
+}
+function myFunction10() {
+    fruits.sort();
+    document.getElementById("demo").innerHTML = fruits;
+}
+
+function myFunction11() {
+    fruits.reverse();
+    document.getElementById("demo").innerHTML = fruits;
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
