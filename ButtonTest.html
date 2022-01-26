@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My First JavaScript</h2>
+
+    <button id="btn">Update</button>
+        
+    <script>
+    onload = init;
+    
+    function init() {
+        var onclick = clickUpdates();
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", onclick, false);
+    }
+    
+    function clickUpdates() {
+        var count = 0;
+        var next = function() {
+            switch(count) {
+                case 0:
+                // function click 1 here
+                console.log("First Click: Display a block of paragraph.");
+                break;
+                case 1:
+                // function click 2 here
+                console.log("Second Click: Replace the current paragraph with a new one.");
+                break;
+                case 2:
+                // function click 3 here
+                console.log("Third Click: The new paragraph gets replaced with another different paragraph.");
+                break;
+                case 3:
+                // function click 4 here
+                console.log("Fourth Click: The paragraph starts rotating.");
+                break;
+                case 4:
+                // function click 5 here
+                console.log("Fifth Click: The paragraph disappears.");
+                break;
+                case 5:
+                // function click 6 here
+                console.log("Sixth Click: //next function.");
+                break;
+                case 6:
+                // function click 7 here
+                console.log("Seventh Click: //some other function.");
+                break;
+                default:
+                // function click 1 here
+                console.log("All clicks are done.");
+            }
+        count = count<7?count+1:7;
+    }
+    
+    return next;
+}
+</script>
+</body>
+</html>
