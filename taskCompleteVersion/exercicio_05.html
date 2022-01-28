@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>Exercício 05</title>
+
+<body>
+
+    <a href="./index.html">&larr; Voltar</a>
+
+    <h2>Exercício 05</h2>
+
+    <p>Crie uma função chamada 'testaNumeros()' que recebe dois parâmentros 'num1' e 'num2'.</p>
+
+    <p>Esta função deve testar se 'num1' é maior que 'num2', retornando 'true'.</p>
+
+    <p>Se 'num1' é menor que 'num2', deve retornar 'false'.</p>
+
+    <p>Exiba no console o resultado da chamada da função.</p>
+
+    <p>----------------------------</p>
+    <p><strong>Insira o valor do parâmentros 'num1': </strong></p>
+    <input type="number" id="getNum1" />
+    <p><strong>Insira o valor do parâmentros 'num2': </strong></p>
+    <input type="number" id="getNum2" />
+    <p></p>
+    <input type="button" value="Submit" onclick="task()" />
+
+    <script>
+        function task() {
+            let num1 = document.getElementById("getNum1").value;
+            let num2 = document.getElementById("getNum2").value;
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            if (num1 > num2) {
+                console.log(true)
+            }
+            else {console.log(false)}
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

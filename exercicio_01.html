@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>Exercício 01</title>
+
+<body>
+
+  <a href="./index.html">&larr; Voltar</a>
+
+  <h2>Exercício 01</h2>
+
+  <p>Crie duas variáveis 'x' e 'y' que recebem valores numéricos (integer e/ou float) e exiba no console:</p>
+
+  <ol>
+    <li>A soma das duas variáveis;</li>
+    <li>A subtração das duas variáveis;</li>
+    <li>A multiplicação entre duas variáveis.</li>
+  </ol>
+  <p>----------------------------</p>
+  <p><strong>Insira o valor da variável X: </strong></p>
+  <input type="number" id="getX" />
+  <p><strong>Insira o valor da variável Y: </strong></p>
+  <input type="number" id="getY" />
+  <p></p>
+  <input type="button" value="Submit" onclick="task()" />
+
+
+  <script>
+    function task() {
+      let x = document.getElementById("getX").value;
+      let y = document.getElementById("getY").value;
+      x = Number(x);
+      y = Number(y);
+
+      let z = x + y;
+      let w = x - y;
+      let k = x * y;
+
+      console.log("A soma das duas variáveis é " + z + " .");
+      console.log("A subtração das duas variáveis é " + w + " .");
+      console.log("A multiplicação das duas variáveis é " + k + " .");
+
+    }
+  </script>
+
+</body>
+
+</html>

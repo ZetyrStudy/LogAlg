@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>Exercício 03</title>
+
+<body>
+
+    <a href="./index.html">&larr; Voltar</a>
+
+    <h2>Exercício 03</h2>
+
+    <p>Crie duas variáveis 'x' e 'y' que recebem valores numéricos (integer e/ou float) e faça:</p>
+
+    <ol>
+        <li>A soma das duas variáveis que deve ser armazenada na variável 'soma';</li>
+        <li>A subtração das duas variáveis que deve ser armazenada na variável 'subt';</li>
+        <li>A multiplicação entre duas variáveis que deve ser armazenada na variável 'mult'.</li>
+    </ol>
+
+    <p>Exiba os resultados de forma organizada, no elemento abaixo (p#output).</p>
+
+    <blockquote><em>Dica: use 'document.getElementbyId()' para identificar 'p#output'!</em></blockquote>
+
+    <p style="padding: 8px; border: 1px solid grey" id="output"></p>
+
+    <p>----------------------------</p>
+    <p><strong>Insira o valor da variável X: </strong></p>
+    <input type="number" id="getX" />
+    <p><strong>Insira o valor da variável Y: </strong></p>
+    <input type="number" id="getY" />
+    <p></p>
+    <input type="button" value="Submit" onclick="task()" />
+
+    <script>
+        function task() {
+            let x = document.getElementById("getX").value;
+            let y = document.getElementById("getY").value;
+            x = Number(x);
+            y = Number(y);
+
+            let soma = x + y;
+            let subt = x - y;
+            let mult = x * y;
+
+
+            document.getElementById("output").innerHTML =
+                "A soma das duas variáveis é <strong>" + soma + "</strong> .<br>"
+                + "A subtração das duas variáveis é <strong>" + subt + "</strong> .<br>"
+                + "A multiplicação das duas variáveis é <strong>" + mult + "</strong> .<br>";
+
+
+        }
+    </script>
+
+</body>
+
+</html>
